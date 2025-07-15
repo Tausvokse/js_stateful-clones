@@ -22,7 +22,7 @@ function transformStateWithClones(state, actions) {
         delete currentState[key];
       }
     }
-    stateHistory.push(currentState);
+    stateHistory.push({ ...currentState });
   }
 
   return stateHistory;
